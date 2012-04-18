@@ -1,0 +1,23 @@
+make a=0
+make c = 1000
+repeat
+make a = a + c
+if c > 500 then call test1  
+if c < 100 then call test2   
+make c = c - 1
+until c < 1 
+message "final numeric value for a = " a 
+stop 
+
+:Test1  
+make a = a + 11  
+if c > 750 then  
+begin  
+   call test2  
+   make a = a + 1  
+end
+return 
+
+:test2  
+make a = a + 22
+return 
